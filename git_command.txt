@@ -1,0 +1,23 @@
+建库
+git init
+git add .
+git commit -m "更新内容说明"" 
+git remote add project https://github.com/0806gcx/Java_class.git
+
+更新代码
+git add .  
+git commit -m "JAVA代码"
+git push -u project master
+
+登录
+git config --global user.name "0806gcx"
+git config --global user.email "602151111@qq.com" 
+ssh -T git@github.com
+
+下载 
+从远程获取最新版本到本地 
+比较本地仓库与下载的temp分支 
+合并temp分支到本地的master分支
+git fetch project master:temp
+git diff temp
+git merge temp
